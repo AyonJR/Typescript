@@ -51,3 +51,15 @@
 // player.name = 40
 
 // player.country = "brazil"
+
+
+
+6. // ? it is showing error as it is the array of the strings 
+
+// let a : string [] = [] ;
+// a.push(4)
+
+
+// let a : (string | number)[] = []
+
+// a.push(false)
