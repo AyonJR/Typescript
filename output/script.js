@@ -40,6 +40,26 @@
 // let a: any[] = [];
 // a.push(5, "hello ");
 // console.log(a);
-7.; //? here we initialized c as an object , but it wont show any error as we array is one kind of object 
-// let c : object 
+7; //? here we initialized c as an object , but it wont show any error as we array is one kind of object
+// let c : object
 // c = [1,2,3]
+8; //? this is the function that we can tell the parametres datatype
+// let myFunc = (a: string, b: string) => {
+//   return a + b;
+// };
+// console.log(myFunc("hello", "neymar"));
+//? we can also mention the return datatype of the function , we cant give other datatypes as it will show error in the typescript
+// let myFunc = (a: string, b: string) : string => {
+//     return a + b;
+//   };
+//   console.log(myFunc("hello", "neymar"));
+9; //? Type alias in typescript , if we use same of datatype in different function we can use type alias
+// type numOrStr = { id: number; name: string };
+// let myFunc = (a: string | number, user: numOrStr) => {
+//   console.log(`my name is ${user.name} and my id is ${user.id}`);
+// };
+// myFunc(12, { id: 11, name: "neymar" });
+// let myFunc2 = (user: numOrStr) => {
+//   console.log(`my name is ${user.name} and my id is ${user.id}`);
+// };
+// myFunc2({ id: 10, name: "messi" });
