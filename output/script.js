@@ -24,7 +24,7 @@
 //     name: "neymar"
 // });
 // console.log(player);
-5.; // ? in this object typescript, took that object as a schema , so we cant change it or cant change the datatypes later , thats why in the player.name it is showing error as it is string type value , and it followed an schema it wont take another new property so it cant add the country property to it  
+5; // ? in this object typescript, took that object as a schema , so we cant change it or cant change the datatypes later , thats why in the player.name it is showing error as it is string type value , and it followed an schema it wont take another new property so it cant add the country property to it
 // let player = {
 //     name : "neymar" ,
 //     age : 30  ,
@@ -32,8 +32,14 @@
 // }
 // player.name = 40
 // player.country = "brazil"
-6.; // ? it is showing error as it is the array of the strings 
+6; // ? it is showing error as it is the array of the strings
 // let a : string [] = [] ;
 // a.push(4)
 // let a : (string | number)[] = []
 // a.push(false)
+// let a: any[] = [];
+// a.push(5, "hello ");
+// console.log(a);
+7.; //? here we initialized c as an object , but it wont show any error as we array is one kind of object 
+// let c : object 
+// c = [1,2,3]
