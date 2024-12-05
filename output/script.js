@@ -64,9 +64,29 @@
 //   console.log(`my name is ${user.name} and my id is ${user.id}`);
 // };
 // myFunc2({ id: 10, name: "messi" });
-10.; //? function signature
-let funcSign;
-funcSign = (a, y) => {
-    console.log(`my name is ${y} and number is ${a}`);
-};
-funcSign(11, "neymar");
+10; //? function signature , if we make void in the structure , we are not allowed to do return anything .
+// let funcSign : (a : number , y: string) => void
+// funcSign = (a : number , y: string) => {
+//     console.log(`my name is ${y} and number is ${a}`)
+// }
+// funcSign(11,"neymar")
+11; // ? constructor function and access modifier
+class player {
+    constructor(n, i, c) {
+        this.name = n;
+        this.id = i;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} plays for ${this.country}`);
+    }
+}
+let neymar = new player("neymar", 11, "brazil");
+let ronaldo = new player("ronaldo", 10, "brazil");
+console.log(neymar.name); // we can see the id outside of the constructor function , which is not secure or accessable publicly
+console.log(neymar.country); // it is showing error , because we make it private but by default it remains public
+console.log(neymar.id); // readonly is used for only reading we cant change it or modify it
+let players = [];
+// players.push("messi") // it will show error as we initialized the array for the player class
+players.push(neymar);
+players.push(ronaldo);
