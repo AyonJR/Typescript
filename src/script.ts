@@ -1,3 +1,5 @@
+// TODO Typescript Journey
+
 // console.log("hello typescript");
 
 1; //? here the country is assigned as a string value , in the next line it is showing error when we reassging in the country again as a number value
@@ -101,3 +103,15 @@
 // };
 
 // myFunc2({ id: 10, name: "messi" });
+
+
+
+10. //? function signature
+
+let funcSign : (a : number , y: string) => void
+
+funcSign = (a : number , y: string) => {
+    console.log(`my name is ${y} and number is ${a}`)
+}
+
+funcSign(11,"neymar")

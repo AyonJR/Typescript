@@ -1,4 +1,5 @@
 "use strict";
+// TODO Typescript Journey
 // console.log("hello typescript");
 1; //? here the country is assigned as a string value , in the next line it is showing error when we reassging in the country again as a number value
 // let country = "Bangladesh";
@@ -63,3 +64,9 @@
 //   console.log(`my name is ${user.name} and my id is ${user.id}`);
 // };
 // myFunc2({ id: 10, name: "messi" });
+10.; //? function signature
+let funcSign;
+funcSign = (a, y) => {
+    console.log(`my name is ${y} and number is ${a}`);
+};
+funcSign(11, "neymar");
