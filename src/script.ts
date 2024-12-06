@@ -116,26 +116,13 @@
 
 11; // ? constructor function and access modifier
 
-class player {
-  public name: string;
-  readonly id: number;
-  private country: string;
-
-  constructor(n: string, i: number, c: string) {
-    this.name = n;
-    this.id = i;
-    this.country = c;
-  }
-  play() {
-    console.log(`${this.name} plays for ${this.country}`);
-  }
-}
+import {player} from './classes//Player.js' // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
 
 let neymar = new player("neymar", 11, "brazil");
 let ronaldo = new player("ronaldo", 10, "brazil");
 
 console.log(neymar.name) // we can see the id outside of the constructor function , which is not secure or accessable publicly
-console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
+// console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
 console.log(neymar.id) // readonly is used for only reading we cant change it or modify it
 
 let players: player[] = [];
@@ -144,3 +131,4 @@ let players: player[] = [];
 
 players.push(neymar);
 players.push(ronaldo);
+
