@@ -1,3 +1,4 @@
+"use strict";
 // TODO Typescript Journey
 // console.log("hello typescript");
 1; //? here the country is assigned as a string value , in the next line it is showing error when we reassging in the country again as a number value
@@ -70,13 +71,20 @@
 // }
 // funcSign(11,"neymar")
 11; // ? constructor function and access modifier
-import { player } from './classes//Player.js'; // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
-let neymar = new player("neymar", 11, "brazil");
-let ronaldo = new player("ronaldo", 10, "brazil");
-console.log(neymar.name); // we can see the id outside of the constructor function , which is not secure or accessable publicly
-// console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
-console.log(neymar.id); // readonly is used for only reading we cant change it or modify it
-let players = [];
-// players.push("messi") // it will show error as we initialized the array for the player class
-players.push(neymar);
-players.push(ronaldo);
+// import {player} from './classes//Player.js' // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
+// let neymar = new player("neymar", 11, "brazil");
+// let ronaldo = new player("ronaldo", 10, "brazil");
+// console.log(neymar.name) // we can see the id outside of the constructor function , which is not secure or accessable publicly
+// // console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
+// console.log(neymar.id) // readonly is used for only reading we cant change it or modify it
+// let players: player[] = [];
+// // players.push("messi") // it will show error as we initialized the array for the player class
+// players.push(neymar);
+// players.push(ronaldo);
+12; // ? interfaces (almost similar ly type alias but it is used for objects and classes)
+let area = (options) => {
+    let height = options.height;
+    let width = options.width;
+    return height * width;
+};
+area({ height: 10, width: 10 });
