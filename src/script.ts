@@ -116,36 +116,39 @@
 
 11; // ? constructor function and access modifier
 
-// import {player} from './classes//Player.js' // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
+import {player} from './classes//Player.js' // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
+import {isPlayer} from "./interfaces/IsPlayer.js"
 
-// let neymar = new player("neymar", 11, "brazil");
-// let ronaldo = new player("ronaldo", 10, "brazil");
 
-// console.log(neymar.name) // we can see the id outside of the constructor function , which is not secure or accessable publicly
-// // console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
-// console.log(neymar.id) // readonly is used for only reading we cant change it or modify it
+let neymar = new player("neymar", 11, "brazil");
+let ronaldo : isPlayer  // which means it will follow the isPlayer interface
+ronaldo = new player("ronaldo", 10, "brazil");  //ultimately in  new Player , it is following the condition that is saying it will follow the isPlayer interface , as player implments the isPlayer interface
 
-// let players: player[] = [];
+console.log(neymar.name) // we can see the id outside of the constructor function , which is not secure or accessable publicly
+// console.log(neymar.country) // it is showing error , because we make it private but by default it remains public
+console.log(neymar.id) // readonly is used for only reading we cant change it or modify it
 
-// // players.push("messi") // it will show error as we initialized the array for the player class
+let players: player[] = [];
 
-// players.push(neymar);
-// players.push(ronaldo);
+// players.push("messi") // it will show error as we initialized the array for the player class
+
+players.push(neymar);
+players.push(ronaldo);
 
 
 12 // ? interfaces (almost similar ly type alias but it is used for objects and classes)
 
 
-interface heightAndWidth  {
-    height : number , width : number
-}
+// interface heightAndWidth  {
+//     height : number , width : number
+// }
 
 
-let area = (options : heightAndWidth) => {
+// let area = (options : heightAndWidth) => {
 
-    let height = options.height
-    let width = options.width
-    return height * width
-}
+//     let height = options.height
+//     let width = options.width
+//     return height * width
+// }
 
-area({height : 10 , width : 10 })
+// area({height : 10 , width : 10 })
