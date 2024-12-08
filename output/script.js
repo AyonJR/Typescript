@@ -105,10 +105,31 @@
 // };
 // let user = "neymar"
 // console.log(myFunc(user))
-// ? we can also say that the generics should be an object , we can also mention the object schema also 
-let myFunc = (obj) => {
-    let id = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { id });
-};
-let user = "neymar";
-console.log(myFunc(user));
+// ? we can also say that the generics should be an object , we can also mention the object schema directly or with interface also
+// interface userObject {
+//   name: string;
+//   id: number;
+// }
+// let myFunc = <T extends userObject>(obj: T) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+// let user = { name: "neymar", id: 11 };
+// console.log(myFunc(user));
+14.; // ? Generics and Enums ==> in this case , if we want dynamically handle the value of the data , we have to use generics in the interface and also have to tell the type of the data in apiResonse as we did , as we  are handling the property 'data' dynamically we are using generics on this , as data property can be object or string or anything else .
+//  enum responseApi {Success, failure , pending , error} // this is enum that can be used further for handling the api completion or failure
+// interface apiResponse<T> {
+//   status: number;
+//   type: responseApi;
+//   data: T;
+// }
+// let response: apiResponse<string> = {
+//   status: 201,
+//   type: responseApi.Success,
+//   data: "SaaS",
+// };
+15.; // ? Tuples - it is like an array , but we dont have to maintain the sequence of the data types in the array but we have to maintain in the tuples. 
+// let a = [11 ,'neymar' , {c:'brazil'}]
+// a[1] = 23 // we can change it or we can give string number or object any where in the array 
+// ? we have to maintain this order in the tuples
+// let b : [string , number , boolean] = ['messi' , 10 , true] 
