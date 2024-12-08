@@ -119,7 +119,6 @@
 // import {player} from './classes//Player.js' // importing from the saparate ts file , imported from player.js because it will ultimately convert to the js file
 // import {isPlayer} from "./interfaces/IsPlayer.js"
 
-
 // let neymar = new player("neymar", 11, "brazil");
 // let ronaldo : isPlayer  // which means it will follow the isPlayer interface
 // ronaldo = new player("ronaldo", 10, "brazil");  //ultimately in  new Player , it is following the condition that is saying it will follow the isPlayer interface , as player implments the isPlayer interface
@@ -135,14 +134,11 @@
 // players.push(neymar);
 // players.push(ronaldo);
 
-
-12 // ? interfaces (almost similar ly type alias but it is used for objects and classes)
-
+12; // ? interfaces (almost similar ly type alias but it is used for objects and classes)
 
 // interface heightAndWidth  {
 //     height : number , width : number
 // }
-
 
 // let area = (options : heightAndWidth) => {
 
@@ -153,12 +149,41 @@
 
 // area({height : 10 , width : 10 })
 
-13.// ? Generics <T> means the input it will receive will the return the same type of input , if string then only string , if number then only number type
+13; // ? Generics <T> means the input it will receive will the return the same type of input , if string then only string , if number then only number type
+
+// function remove<T>(arr : Array<T>) : Array<T> {
+
+// return arr
+// }
+
+// remove([1,2,3,4])
+
+// ? we can also say that the generics should be an object , so if we send send any other value it will show error
+
+// let myFunc = <T extends object >(obj: T) => {
+//   let id = Math.floor(Math.random() * 100);
+ 
+//   return {...obj , id }
+
+// };
 
 
-function remove<T>(arr : Array<T>) : Array<T> {
+// let user = "neymar"
 
-return arr
-}
 
-remove([1,2,3,4])
+// console.log(myFunc(user))
+
+// ? we can also say that the generics should be an object , we can also mention the object schema also 
+
+let myFunc = <T extends object >(obj: T) => {
+  let id = Math.floor(Math.random() * 100);
+ 
+  return {...obj , id }
+
+};
+
+
+let user = "neymar"
+
+
+console.log(myFunc(user))

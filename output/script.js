@@ -93,8 +93,22 @@
 //     return height * width
 // }
 // area({height : 10 , width : 10 })
-13.; // ? Generics <T> means the input it will receive will the return the same type of input , if string then only string , if number then only number type
-function remove(arr) {
-    return arr;
-}
-remove([1, 2, 3, 4]);
+13; // ? Generics <T> means the input it will receive will the return the same type of input , if string then only string , if number then only number type
+// function remove<T>(arr : Array<T>) : Array<T> {
+// return arr
+// }
+// remove([1,2,3,4])
+// ? we can also say that the generics should be an object , so if we send send any other value it will show error
+// let myFunc = <T extends object >(obj: T) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return {...obj , id }
+// };
+// let user = "neymar"
+// console.log(myFunc(user))
+// ? we can also say that the generics should be an object , we can also mention the object schema also 
+let myFunc = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+let user = "neymar";
+console.log(myFunc(user));
